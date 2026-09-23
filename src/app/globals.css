@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-invoice-sheet,
+  .print-invoice-sheet * {
+    visibility: visible !important;
+  }
+
+  .print-invoice-sheet {
+    position: fixed;
+    inset: 0;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  .print-invoice-actions,
+  button {
+    display: none !important;
+  }
+}
